@@ -8,7 +8,11 @@
   main = function(paramaters, apiKey, callback) {
     var host, url, urlParams;
     host = "https://api.havenondemand.com/1/api/sync/analyzesentiment/v1";
-    urlParams = querystring.stringify(paramaters);
+    if (typeof paramaters === 'string') {
+      urlParams = 'text=' + paramaters;
+    } else if (typeof paramaters === 'object') {
+      urlParams = querystring.stringify(paramaters);
+    }
     url = host + '?' + urlParams + '&apikey=' + apiKey;
     return request({
       url: url,

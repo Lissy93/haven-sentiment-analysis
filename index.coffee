@@ -3,7 +3,12 @@ querystring = require 'querystring'
 
 main = (paramaters, apiKey, callback)->
   host = "https://api.havenondemand.com/1/api/sync/analyzesentiment/v1"
-  urlParams = querystring.stringify(paramaters)
+
+  if typeof paramaters is 'string'
+    urlParams = 'text='+paramaters
+  else if typeof paramaters is 'object'
+    urlParams = querystring.stringify(paramaters)
+
   url = host + '?' + urlParams + '&apikey=' + apiKey
 
   request {
