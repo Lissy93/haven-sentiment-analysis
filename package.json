@@ -1,0 +1,34 @@
+{
+  "name": "haven-sentiment-analysis",
+  "version": "0.0.1",
+  "description": "A Node.js client library for HP Haven OnDemand Sentiment Analysis module",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lissy93/haven-sentiment-analysis.git"
+  },
+  "keywords": [
+    "hp",
+    "idol",
+    "ondemand",
+    "haven",
+    "ondemand",
+    "ondemand",
+    "sentiment",
+    "analysis",
+    "sentiment",
+    "mood",
+    "detection",
+    "attitude",
+    "mining"
+  ],
+  "author": "Alicia Sykes <sykes.alicia@gmail.com> (http://aliciasykes.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lissy93/haven-sentiment-analysis/issues"
+  },
+  "homepage": "https://github.com/Lissy93/haven-sentiment-analysis#readme"
+}
