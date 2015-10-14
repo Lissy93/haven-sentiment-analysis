@@ -1,10 +1,23 @@
 (function() {
-  var main;
+  var main, querystring, request;
 
-  main = function() {
-    return {
-      result: "Hello World"
-    };
+  request = require('request');
+
+  querystring = require('querystring');
+
+  main = function(paramaters, apiKey, callback) {
+    var host, url, urlParams;
+    host = "https://api.havenondemand.com/1/api/sync/analyzesentiment/v1";
+    urlParams = querystring.stringify(paramaters);
+    url = host + '?' + urlParams + '&apikey=' + apiKey;
+    return request({
+      url: url,
+      json: true
+    }, function(error, response, body) {
+      if (!error && response.statusCode === 200) {
+        return callback(body);
+      }
+    });
   };
 
   module.exports = main;
