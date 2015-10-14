@@ -1,6 +1,10 @@
 # haven-sentiment-analysis
 > Node.js client for HP Haven OnDemand Sentiment Analysis
 
+[![Dependency Status](https://david-dm.org/lissy93/haven-sentiment-analysis.svg)](https://david-dm.org/lissy93/haven-sentiment-analysis)
+[![devDependency Status](https://david-dm.org/lissy93/haven-sentiment-analysis/dev-status.svg)](https://david-dm.org/lissy93/haven-sentiment-analysis#info=devDependencies)
+[![Code Climate](https://codeclimate.com/github/Lissy93/haven-sentiment-analysis/badges/gpa.svg)](https://codeclimate.com/github/Lissy93/haven-sentiment-analysis)
+
 ## Install
 ```
 npm install git://github.com/Lissy93/haven-sentiment-analysis.git
