@@ -1,6 +1,6 @@
 {
   "name": "haven-sentiment-analysis",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Node.js client library for HP Haven OnDemand Sentiment Analysis module",
   "main": "index.js",
   "repository": {
