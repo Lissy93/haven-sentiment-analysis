@@ -1,7 +1,6 @@
 /**
  * The gulp file configures the gulp build setup
  * Run "gulp build" to built project and compile CoffeeScript
- * Run "gulp test" to run Mocha unit tests and Istanbul coverage tests
  * Run "gulp" to clean, build, test and watch for changes during development
  */
 
@@ -12,8 +11,6 @@ var coffee  = require('gulp-coffee');
 var lint    = require('gulp-coffeelint');
 var del     = require('del');
 var footer  = require('gulp-footer');
-var mocha   = require('gulp-mocha');
-var istanbul= require('gulp-istanbul');
 
 require('coffee-script/register');
 
@@ -35,29 +32,11 @@ gulp.task('build', ['clean'],  function(){
         .pipe(gulp.dest('./'));
 });
 
-/* Run unit tests and generate coverage report */
-gulp.task('test', function (cb) {
-    gulp.src(['./index.js'])
-        .pipe(istanbul())
-        .pipe(istanbul.hookRequire())
-        .on('finish', function () {
-            gulp.src('./test/**/*.coffee', {read: false})
-                .pipe(mocha({ reporter: 'spec' }))
-                .pipe(istanbul.writeReports({reporters: ['text-summary', 'lcov']}))
-                .on('end', cb);
-        });
-});
-
 /* Watch for changes and refresh */
 gulp.task('watch', function(){
-    gulp.watch('./**/*.coffee', ['test-after-build']);
-    gulp.watch('./test/**/*.coffee', ['test']);
+    gulp.watch('./**/*.coffee', ['build']);
 });
 
-/* Don't test, until it has built, to avoid file not found errors */
-gulp.task('test-after-build',['build'],function(){
-    gulp.start('test');
-});
 
 /* Defualt gulp task, deletes old files, compiles source files and runs tests */
-gulp.task('default', ['test-after-build', 'watch']);
+gulp.task('default', ['build', 'watch']);
