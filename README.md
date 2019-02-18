@@ -1,3 +1,13 @@
+**🚨Note: The original Haven OnDemand service is not currently operational. This package will NOT work🚨**
+
+While Daven OnDemand is down, this package will no longer work. If MicroFocus (the buyer of Haven OnDemand) provides support for the original Haven OnDemand again, I will update this module accordingly, to get it working again.
+
+In the meantime, [IBM Watson](https://www.ibm.com/watson), [Microsoft Azure](https://azure.microsoft.com/en-gb/services/cognitive-services/text-analytics/) and [Google Cloud](https://cloud.google.com/natural-language/) offers similar  text analysis products, and are free to use for small / personal projects.
+
+Alternativley if it's just sentiment analysis your after, I have written my own stand-alone, AFINN-111 based package, here: [sentiment-analysis](https://github.com/Lissy93/sentiment-analysis). Hope that helps!
+
+----
+
 # haven-sentiment-analysis
 > Node.js client for HP Haven OnDemand Sentiment Analysis
 
@@ -63,5 +73,5 @@ API Keys are free for under 50,000 requests monthly. (at the time of writing thi
 See gulpfile.js for automated build tasks
 
 ## License
-MIT � [Alicia Sykes](http://aliciasykes.com)
+MIT © [Alicia Sykes](http://aliciasykes.com)
 
